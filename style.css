@@ -1,0 +1,50 @@
+:root{
+    --moderateBlue: hsl(238, 40%, 52%);
+    --softRed: hsl(358, 79%, 66%);
+    --lightGrayishBlue: hsl(239, 57%, 85%);
+    --paleRed: hsl(357, 100%, 86%);
+    --darkBlue: hsl(212, 24%, 26%);
+    --grayishBlue: hsl(211, 10%, 45%);
+    --lightGray: hsl(223, 19%, 93%);
+    --veryLightGray: hsl(228, 33%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    background-color: var(--veryLightGray);
+    padding: 2rem;
+}
+
+.divComment{
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.divUser{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.divUser img{
+    width: 10%;
+    height: 10%;
+}
+
+h1{
+    font-size: 1rem;
+}
+
+p{
+    color: var(--grayishBlue);
+    font-weight: 400;
+}
