@@ -26,7 +26,7 @@ main{
 
 .divComment{
     background-color: var(--white);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
 }
@@ -49,4 +49,32 @@ h1{
 p{
     color: var(--grayishBlue);
     font-weight: 400;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number{
+    background-color: var(--veryLightGray);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+span{
+    color: var(--moderateBlue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.reply{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
 }

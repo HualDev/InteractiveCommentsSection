@@ -10,25 +10,94 @@ xmlhttp.onload = function(){
     amyPhoto =myObj.comments[0].user.image.png
     amyName = myObj.comments[0].user.username
     amyDate = myObj.comments[0].createdAt
+    amyScore = myObj.comments[0].score
     
     maxComment = myObj.comments[1].content
     maxPhoto = myObj.comments[1].user.image.png
     maxName = myObj.comments[1].user.username
     maxDate = myObj.comments[1].createdAt
+    maxScore = myObj.comments[1].score
 
-    console.log(maxPhoto)
+    console.log(amyScore)
 
-    const divComment = document.createElement('div') 
-    divComment.id='divComment'
-    divComment.className='divComment'
+    
+    //Amy Comment
 
-    const divCommentMax = document.createElement('div') 
+    const divAmy = document.createElement('div') 
+    divAmy.id='divComment'
+    divAmy.className='divComment'
+    comments.appendChild(divAmy)
+
+    const divUserAmy =document.createElement('div')
+    divUserAmy.className='divUser'
+    divAmy.appendChild(divUserAmy)
+
+    const imgAmy = document.createElement('img')
+    imgAmy.src=amyPhoto
+    imgAmy.alt='Amy photo'
+    divUserAmy.appendChild(imgAmy)
+
+    const h1NameAmy= document.createElement('h1')
+    h1NameAmy.textContent=amyName
+    divUserAmy.appendChild(h1NameAmy)
+
+    const pAmy= document.createElement('p')
+    pAmy.textContent=amyDate
+    divUserAmy.appendChild(pAmy)
+
+    const CommentAmy = document.createElement('p')
+    CommentAmy.textContent=amyComment
+    divAmy.appendChild(CommentAmy)
+
+    const actionCommentAmy = document.createElement('div')
+    actionCommentAmy.className='action'
+    divAmy.appendChild(actionCommentAmy)
+
+    const numberAmy =document.createElement('div')
+    numberAmy.className='number'
+    actionCommentAmy.appendChild(numberAmy)
+
+    const plusAmy = document.createElement('img')
+    plusAmy.src='./images/icon-plus.svg'
+    plusAmy.alt='Plus Image'
+    numberAmy.appendChild(plusAmy)
+
+    const scoreAmy = document.createElement('span')
+    scoreAmy.textContent=amyScore
+    numberAmy.appendChild(scoreAmy)
+
+    const lessAmy = document.createElement('img')
+    lessAmy.src='./images/icon-minus.svg'
+    lessAmy.alt='Less image'
+    numberAmy.appendChild(lessAmy)
+
+    const replyAmy =document.createElement('div')
+    replyAmy.className='reply'
+    actionCommentAmy.appendChild(replyAmy)
+
+    const imgReplyAmy = document.createElement('img')
+    imgReplyAmy.src='./images/icon-reply.svg'
+    imgReplyAmy.alt='Reply image'
+    replyAmy.appendChild(imgReplyAmy)
+
+    const textReplyAmy = document.createElement('span')
+    textReplyAmy.textContent='Reply'
+    replyAmy.appendChild(textReplyAmy)
+
+    /*const divCommentMax = document.createElement('div') 
     divCommentMax.id='divCommentMax'
     divCommentMax.className='divComment'
 
     const divUser = document.createElement('div')
     divUser.id='divUser'
     divUser.className='divUser'
+
+    const divAmyrates =document.createElement('div')
+    divAmyrates.id ='divAmyRates'
+    divAmyrates.className='divAmyRates'
+
+    const quantityAmy = document.createElement('div')
+    quantityAmy.className='quantityAmy'
 
     const pAmy = document.createElement('p')
     pAmy.textContent=amyComment
@@ -84,7 +153,7 @@ xmlhttp.onload = function(){
     
 
 
-    console.log(amyPhoto)
+    console.log(amyPhoto)*/
 }
 
 xmlhttp.open('GET','./data.json')
