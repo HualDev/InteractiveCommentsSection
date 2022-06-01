@@ -1,154 +1,66 @@
 const xmlhttp = new XMLHttpRequest()
 let comments = document.getElementById('comments')
-let amyComment 
 
 xmlhttp.onload = function(){
     let myObj = JSON.parse(this.responseText)
     
     
-    amyComment = myObj.comments[0].content
-    amyPhoto =myObj.comments[0].user.image.png
-    amyName = myObj.comments[0].user.username
-    amyDate = myObj.comments[0].createdAt
-    amyScore = myObj.comments[0].score
-    
-    maxComment = myObj.comments[1].content
-    maxPhoto = myObj.comments[1].user.image.png
-    maxName = myObj.comments[1].user.username
-    maxDate = myObj.comments[1].createdAt
-    maxScore = myObj.comments[1].score
+    let amyComment = myObj.comments[0].content
+    let amyPhoto =myObj.comments[0].user.image.png
+    let amyName = myObj.comments[0].user.username
+    let amyDate = myObj.comments[0].createdAt
+    let amyScore = myObj.comments[0].score
+        
+    let maxComment = myObj.comments[1].content
+    let maxPhoto = myObj.comments[1].user.image.png
+    let maxName = myObj.comments[1].user.username
+    let maxDate = myObj.comments[1].createdAt
+    let maxScore = myObj.comments[1].score
 
-    console.log(amyScore)
+    let ransesComment = myObj.comments[1].replies[0].content
+    let ransesPhoto = myObj.comments[1].replies[0].user.image.png
+    let ransesName = myObj.comments[1].replies[0].user.username
+    let ransesDate = myObj.comments[1].replies[0].createdAt
+    let ransesScore = myObj.comments[1].replies[0].score
 
-    
+    let juliusComment = myObj.comments[1].replies[1].content
+    let juliusPhoto = myObj.comments[1].replies[1].user.image.png
+    let juliusName = myObj.comments[1].replies[1].user.username
+    let juliusDate = myObj.comments[1].replies[1].createdAt
+    let juliusScore = myObj.comments[1].replies[1].score
+
+    console.log(ransesScore)
+
     //Amy Comment
+    document.getElementById('amyPhoto').src=amyPhoto
+    document.getElementById('amyName').textContent=amyName
+    document.getElementById('amyTime').textContent=amyDate
+    document.getElementById('amyComment').textContent=amyComment
+    document.getElementById('amyNumber').textContent=amyScore
 
-    const divAmy = document.createElement('div') 
-    divAmy.id='divComment'
-    divAmy.className='divComment'
-    comments.appendChild(divAmy)
+    //Max Comment
+    document.getElementById('maxPhoto').src=maxPhoto
+    document.getElementById('maxName').textContent=maxName
+    document.getElementById('maxTime').textContent=maxDate
+    document.getElementById('maxComment').textContent=maxComment
+    document.getElementById('maxNumber').textContent=maxScore
 
-    const divUserAmy =document.createElement('div')
-    divUserAmy.className='divUser'
-    divAmy.appendChild(divUserAmy)
+    //Ranses Comment
+    document.getElementById('ransesPhoto').src=ransesPhoto
+    document.getElementById('ransesName').textContent=ransesName
+    document.getElementById('ransesTime').textContent=ransesDate
+    document.getElementById('ransesComment').textContent=ransesComment
+    document.getElementById('ransesNumber').textContent=ransesScore
 
-    const imgAmy = document.createElement('img')
-    imgAmy.src=amyPhoto
-    imgAmy.alt='Amy photo'
-    divUserAmy.appendChild(imgAmy)
+    //Julius Comment
+    document.getElementById('juliusPhoto').src=juliusPhoto
+    document.getElementById('juliusName').textContent=juliusName
+    document.getElementById('juliusTime').textContent=juliusDate
+    document.getElementById('juliusComment').textContent=juliusComment
+    document.getElementById('juliusNumber').textContent=juliusScore
+    document.getElementById('juliusPhotoR').src=juliusPhoto
 
-    const h1NameAmy= document.createElement('h1')
-    h1NameAmy.textContent=amyName
-    divUserAmy.appendChild(h1NameAmy)
-
-    const pAmy= document.createElement('p')
-    pAmy.textContent=amyDate
-    divUserAmy.appendChild(pAmy)
-
-    const CommentAmy = document.createElement('p')
-    CommentAmy.textContent=amyComment
-    divAmy.appendChild(CommentAmy)
-
-    const actionCommentAmy = document.createElement('div')
-    actionCommentAmy.className='action'
-    divAmy.appendChild(actionCommentAmy)
-
-    const numberAmy =document.createElement('div')
-    numberAmy.className='number'
-    actionCommentAmy.appendChild(numberAmy)
-
-    const plusAmy = document.createElement('img')
-    plusAmy.src='./images/icon-plus.svg'
-    plusAmy.alt='Plus Image'
-    numberAmy.appendChild(plusAmy)
-
-    const scoreAmy = document.createElement('span')
-    scoreAmy.textContent=amyScore
-    numberAmy.appendChild(scoreAmy)
-
-    const lessAmy = document.createElement('img')
-    lessAmy.src='./images/icon-minus.svg'
-    lessAmy.alt='Less image'
-    numberAmy.appendChild(lessAmy)
-
-    const replyAmy =document.createElement('div')
-    replyAmy.className='reply'
-    actionCommentAmy.appendChild(replyAmy)
-
-    const imgReplyAmy = document.createElement('img')
-    imgReplyAmy.src='./images/icon-reply.svg'
-    imgReplyAmy.alt='Reply image'
-    replyAmy.appendChild(imgReplyAmy)
-
-    const textReplyAmy = document.createElement('span')
-    textReplyAmy.textContent='Reply'
-    replyAmy.appendChild(textReplyAmy)
-
-
-     //Max Comment
-
-     const divMax = document.createElement('div') 
-     divMax.id='divCommentMax'
-     divMax.className='divComment'
-     comments.appendChild(divMax)
- 
-     const divUserMax =document.createElement('div')
-     divUserMax.className='divUser'
-     divMax.appendChild(divUserMax)
- 
-     const imgMax = document.createElement('img')
-     imgMax.src=maxPhoto
-     imgMax.alt='Max photo'
-     divUserMax.appendChild(imgMax)
- 
-     const h1NameMax= document.createElement('h1')
-     h1NameMax.textContent=maxName
-     divUserMax.appendChild(h1NameMax)
- 
-     const pMax= document.createElement('p')
-     pMax.textContent=maxDate
-     divUserMax.appendChild(pMax)
- 
-     const commentMax = document.createElement('p')
-     commentMax.textContent=maxComment
-     divMax.appendChild(commentMax)
- 
-     const actionCommentMax = document.createElement('div')
-     actionCommentMax.className='action'
-     divMax.appendChild(actionCommentMax)
- 
-     const numberMax =document.createElement('div')
-     numberMax.className='number'
-     actionCommentMax.appendChild(numberMax)
- 
-     const plusMax = document.createElement('img')
-     plusMax.src='./images/icon-plus.svg'
-     plusMax.alt='Plus Image'
-     numberMax.appendChild(plusMax)
- 
-     const scoreMax = document.createElement('span')
-     scoreMax.textContent=maxScore
-     numberMax.appendChild(scoreMax)
- 
-     const lessMax = document.createElement('img')
-     lessMax.src='./images/icon-minus.svg'
-     lessMax.alt='Less image'
-     numberMax.appendChild(lessMax)
- 
-     const replyMax =document.createElement('div')
-     replyMax.className='reply'
-     actionCommentMax.appendChild(replyMax)
- 
-     const imgReplyMax = document.createElement('img')
-     imgReplyMax.src='./images/icon-reply.svg'
-     imgReplyMax.alt='Reply image'
-     replyMax.appendChild(imgReplyMax)
- 
-     const textReplyMax = document.createElement('span')
-     textReplyMax.textContent='Reply'
-     replyMax.appendChild(textReplyMax)
-
-   
+    
 }
 
 xmlhttp.open('GET','./data.json')

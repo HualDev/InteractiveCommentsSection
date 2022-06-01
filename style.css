@@ -24,20 +24,20 @@ main{
     padding: 2rem;
 }
 
-.divComment{
+.comment{
     background-color: var(--white);
     padding: 1rem 1.5rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
 }
 
-.divUser{
+.user{
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.divUser img{
+.user img{
     width: 10%;
     height: 10%;
 }
@@ -77,4 +77,63 @@ span{
     display: flex;
     align-items: center;
     gap: 0.7rem;
+}
+
+.commentReply{
+    border-left: solid 2px var(--lightGray);
+    padding-left: 1rem;
+}
+
+.commentReply .user .you{
+    background-color: var(--moderateBlue);
+    color: var(--white);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.changes{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.delete span{
+    color: var(--softRed);
+}
+
+textarea{
+    border: solid 2px var(--lightGray);
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+textarea::placeholder{
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.add img{
+    width: 10%;
+    height: 10%;
+}
+
+button{
+    border: none;
+    background-color: var(--moderateBlue);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 0.9rem 1.8rem;
+    border-radius: 0.5rem;
 }
