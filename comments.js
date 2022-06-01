@@ -84,76 +84,71 @@ xmlhttp.onload = function(){
     textReplyAmy.textContent='Reply'
     replyAmy.appendChild(textReplyAmy)
 
-    /*const divCommentMax = document.createElement('div') 
-    divCommentMax.id='divCommentMax'
-    divCommentMax.className='divComment'
 
-    const divUser = document.createElement('div')
-    divUser.id='divUser'
-    divUser.className='divUser'
+     //Max Comment
 
-    const divAmyrates =document.createElement('div')
-    divAmyrates.id ='divAmyRates'
-    divAmyrates.className='divAmyRates'
+     const divMax = document.createElement('div') 
+     divMax.id='divCommentMax'
+     divMax.className='divComment'
+     comments.appendChild(divMax)
+ 
+     const divUserMax =document.createElement('div')
+     divUserMax.className='divUser'
+     divMax.appendChild(divUserMax)
+ 
+     const imgMax = document.createElement('img')
+     imgMax.src=maxPhoto
+     imgMax.alt='Max photo'
+     divUserMax.appendChild(imgMax)
+ 
+     const h1NameMax= document.createElement('h1')
+     h1NameMax.textContent=maxName
+     divUserMax.appendChild(h1NameMax)
+ 
+     const pMax= document.createElement('p')
+     pMax.textContent=maxDate
+     divUserMax.appendChild(pMax)
+ 
+     const commentMax = document.createElement('p')
+     commentMax.textContent=maxComment
+     divMax.appendChild(commentMax)
+ 
+     const actionCommentMax = document.createElement('div')
+     actionCommentMax.className='action'
+     divMax.appendChild(actionCommentMax)
+ 
+     const numberMax =document.createElement('div')
+     numberMax.className='number'
+     actionCommentMax.appendChild(numberMax)
+ 
+     const plusMax = document.createElement('img')
+     plusMax.src='./images/icon-plus.svg'
+     plusMax.alt='Plus Image'
+     numberMax.appendChild(plusMax)
+ 
+     const scoreMax = document.createElement('span')
+     scoreMax.textContent=maxScore
+     numberMax.appendChild(scoreMax)
+ 
+     const lessMax = document.createElement('img')
+     lessMax.src='./images/icon-minus.svg'
+     lessMax.alt='Less image'
+     numberMax.appendChild(lessMax)
+ 
+     const replyMax =document.createElement('div')
+     replyMax.className='reply'
+     actionCommentMax.appendChild(replyMax)
+ 
+     const imgReplyMax = document.createElement('img')
+     imgReplyMax.src='./images/icon-reply.svg'
+     imgReplyMax.alt='Reply image'
+     replyMax.appendChild(imgReplyMax)
+ 
+     const textReplyMax = document.createElement('span')
+     textReplyMax.textContent='Reply'
+     replyMax.appendChild(textReplyMax)
 
-    const quantityAmy = document.createElement('div')
-    quantityAmy.className='quantityAmy'
-
-    const pAmy = document.createElement('p')
-    pAmy.textContent=amyComment
-
-    const imgAmy = document.createElement('img')
-    imgAmy.src= amyPhoto
-    imgAmy.alt='Amy photo'
-
-    const h1Amy = document.createElement('h1')
-    h1Amy.textContent = amyName
-
-    const dateAmy = document.createElement('p')
-    dateAmy.textContent=amyDate
-
-    const divMax = document.createElement('div')
-    divMax.id='divMax'
-    divMax.className='divUser'
-
-    const pMax = document.createElement('p')
-    pMax.textContent=maxComment
-
-    const imgMax = document.createElement('img')
-    imgMax.src= maxPhoto
-    imgMax.alt='Max photo'
-
-    const h1Max = document.createElement('h1')
-    h1Max.textContent = maxName
-    
-    const dateMax = document.createElement('p')
-    dateMax.textContent=maxDate
    
-    
-    
-
-    
-
-
-    comments.appendChild(divComment)
-    divComment.appendChild(divUser)    
-    divUser.appendChild(imgAmy)
-    divUser.appendChild(h1Amy)
-    divUser.appendChild(dateAmy)
-    divComment.appendChild(pAmy)
-
-    comments.appendChild(divCommentMax)
-    divCommentMax.appendChild(divMax)    
-    divMax.appendChild(imgMax)
-    divMax.appendChild(h1Max)
-    divMax.appendChild(dateMax)
-    divCommentMax.appendChild(pMax)
-
-    
-    
-
-
-    console.log(amyPhoto)*/
 }
 
 xmlhttp.open('GET','./data.json')
