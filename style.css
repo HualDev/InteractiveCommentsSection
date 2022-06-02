@@ -117,6 +117,10 @@ textarea::placeholder{
     opacity: 0.8;
 }
 
+.textArea{
+    margin-top: 1rem;
+}
+
 .add{
     display: flex;
     justify-content: space-between;
